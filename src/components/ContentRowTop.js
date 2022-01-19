@@ -1,6 +1,6 @@
 import React from 'react';
 
-import GenresInDb from './GenreInDbClass';
+import GenresInDb from './ProductsInDb';
 import ContentRowMovies from './ContentRowMovies';
 import LastMovieInDb from './LastMovieInDb';
 

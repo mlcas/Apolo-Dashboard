@@ -5,8 +5,9 @@ import {  Route, Routes} from "react-router-dom";
 
 import ContentRowMOvies from './ContentRowMovies';
 import LastMovieInDb from './LastMovieInDb';
-import GenreInDbClass from './GenreInDbClass';
+
 import NotFound from './NotFound';
+import ProductsInDb from './ProductsInDb';
 
 
 
@@ -19,7 +20,7 @@ function App() {
          
           <Routes>
           <Route  path="/" exact ={true}  element= {< ContentWrapper />} />
-          <Route  path="/genre"   element= {< GenreInDbClass />} />
+          <Route  path="/product"   element= {< ProductsInDb />} />
           <Route path="/movies" element= {< ContentRowMOvies />} />
           <Route path="/lastMovie" element= {< LastMovieInDb />} />
           <Route path="*"  element= {< NotFound />} />

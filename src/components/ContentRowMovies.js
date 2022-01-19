@@ -5,7 +5,7 @@ import SmallCard from './SmallCard'; // importa el componente SmallCard que tien
 let productInDataBase = {
     color:   "primary",
     titulo: "Movies in Data Base",
-    valor: 21,
+    valor: 25,
     icono: "fas fa-film",
 }
 

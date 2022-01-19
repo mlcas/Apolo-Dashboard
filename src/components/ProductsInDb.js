@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import Genre from "./Genre";
-class GenreInDbClass extends Component {
+import Product from "./Product";
+
+class ProductsInDb extends Component {
   constructor() {
     super();
     this.state = {
@@ -27,9 +28,7 @@ class GenreInDbClass extends Component {
   }
 
   render() {
-       {/*<!-- Categories in DB -->*/}
-   
-     {/*<!-- Categories in DB -->*/}
+      
     return (
       <React.Fragment>
         {/*<!-- Categories in DB -->*/}
@@ -40,13 +39,13 @@ class GenreInDbClass extends Component {
                 onMouseOver={() => this.cambiarColor()}
                 className="m-0 font-weight-bold text-gray-800"
               >
-                Genres in Data Base
+                Products in Data Base
               </h6>
             </div>
             <div className={"card-body " + this.state.color}>
               <div className="row">
                 { this.state.productsList.map((product, index) => {
-                  return <Genre {...product} key={index} />;
+                  return <Product {...product} key={index} />;
                 })}
               </div>
             </div>
@@ -56,4 +55,4 @@ class GenreInDbClass extends Component {
     );
   }
 }
-export default GenreInDbClass;
+export default ProductsInDb;
