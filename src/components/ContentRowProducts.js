@@ -17,7 +17,7 @@ function ContentRowProducts() {
       .then((data) => {
         setProductTotal(data.count);
         setCategoriesTotal(data.categoriesCount);
-        console.log(data.products)
+       
       })
       .catch((error) => console.log(error));
   }, []);
@@ -38,20 +38,20 @@ function ContentRowProducts() {
       <div className="row">
         <SmallCard
          color = "primary"
-         titulo= "Products in Data Base"
+         titulo= "Productos en la base de datos"
          icono = "fas fa-film"
           valor={productTotal}
         />
         <SmallCard
            valor = {categoriesTotal}
            color= "success"
-           titulo = "Total Categories"
+           titulo = "Total de categorias"
             icono = "fas fa-award"
         />
         <SmallCard
            valor = {usersTotal}
            color= "warning"
-           titulo = "Users in Data Base"
+           titulo = "Usuarios en la base de datos"
             icono = "fas fa-user"
         />
       </div>

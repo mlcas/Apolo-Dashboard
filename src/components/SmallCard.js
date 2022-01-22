@@ -1,7 +1,7 @@
 import React from 'react';
 
 function SmallCard({color,titulo,icono,valor}){
-    console.log(color)
+   
     return(
         <React.Fragment>
             <div className="col-md-4 mb-4">

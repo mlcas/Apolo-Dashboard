@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 
 import ProductsInDb from './ProductsInDb';
 
-import LastMovieInDb from './LastMovieInDb';
+
 import ContentRowProducts from "./ContentRowProducts";
+import Categories from "./Categories";
+import ContentLastProduct from "./ContentLastProduct";
 
 
 function ContentRowTop(){
@@ -53,16 +55,17 @@ function ContentRowTop(){
 					{/*<!-- Content Row Last Movie in Data Base -->*/}
 					<div className="row">
 						{/*<!-- Last Movie in DB -->*/}
-						<LastMovieInDb 
-							
-							lastImgProduct = {lastImgProduct}
-						/>
+						<ContentLastProduct/>
+						<Categories />
 						{/*<!-- End content row last movie in Data Base -->*/}
 
 						{/*<!-- Genres in DB -->*/}
 						<ProductsInDb />
+						
 
-						{/*<!--End Genres In Db-->*/}		
+						{/*<!--End Genres In Db-->*/}	
+
+						
 					</div>
 				</div>
 				{/*<!--End Content Row Top-->*/}

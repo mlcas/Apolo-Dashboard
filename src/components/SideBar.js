@@ -35,9 +35,9 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                <Link to="/lastMovie" className="nav-link collapsed" >
+                <Link to="/lastProduct" className="nav-link collapsed" >
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Last Movie In Db</span>
+                        <span>Ultimo Producto</span>
                 </Link>
                 </li>
 
@@ -49,16 +49,7 @@ function SideBar(){
                         </Link>
                 </li>
 
-                {/*<!-- Nav Item - Tables -->*/}
-                <li className="nav-item">
-                <Link to="/countBySecction" className="nav-link" >
-                     
-                        <i className="fas fa-fw fa-table"></i>
-                        <span>Count Total By Secction</span>
-                        </Link>
-                </li>
-
-                {/*<!-- Divider -->*/}
+              
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
             {/*<!-- End of Sidebar -->*/}

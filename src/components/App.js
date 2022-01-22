@@ -4,11 +4,9 @@ import ContentWrapper from './ContentWrapper';
 import {  Route, Routes} from "react-router-dom";
 
 
-import LastMovieInDb from './LastMovieInDb';
-
 import NotFound from './NotFound';
 import ProductsInDb from './ProductsInDb';
-import ContentRowProducts from './ContentRowProducts';
+import ContentLastProduct from './ContentLastProduct';
 
 
 
@@ -22,8 +20,7 @@ function App() {
           <Routes>
           <Route  path="/" exact ={true}  element= {< ContentWrapper />} />
           <Route  path="/product"   element= {< ProductsInDb />} />
-          <Route path="/countBySecction" element= {< ContentRowProducts />} />
-          <Route path="/lastMovie" element= {< LastMovieInDb />} />
+          <Route path="/lastProduct" element= {< ContentLastProduct />} />
           <Route path="*"  element= {< NotFound />} />
           </Routes>
         
