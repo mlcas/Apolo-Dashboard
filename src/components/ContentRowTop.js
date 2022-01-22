@@ -1,10 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 
-import GenresInDb from './ProductsInDb';
-import ContentRowMovies from './ContentRowMovies';
+import ProductsInDb from './ProductsInDb';
+
 import LastMovieInDb from './LastMovieInDb';
+import ContentRowProducts from "./ContentRowProducts";
+
 
 function ContentRowTop(){
+
+	const [lastProducts, setLastProducts] = useState([]);
+	const [lastImgProduct, setLastImgProduct] = useState({});
+	
+
+	useEffect(() => {
+		fetch("/api/product/")
+		  .then((respuesta) => {
+			return respuesta.json();
+		  })
+		  .then((data) => {
+			setLastProducts(data.products.pop())
+		  })
+		  .catch((error) => console.log(error));
+	  }, []);
+   console.log(lastProducts.id)
+	  useEffect(() => {
+		fetch(`/api/product/${lastProducts.id}`)
+		  .then((respuesta) => {
+			return respuesta.json();
+		  })
+		  .then((data) => {
+			  console.log(data)
+			setLastImgProduct(data.data.imgUrl)
+			//console.log(lastImgProduct)
+		  })
+		  .catch((error) => console.log(error));
+	  }, );
+	 console.log(lastImgProduct)
+
     return(
         <React.Fragment>
 				{/*<!-- Content Row Top -->*/}
@@ -14,18 +46,21 @@ function ContentRowTop(){
 					</div>
 				
 					{/*<!-- Content Row Movies-->*/}
-					<ContentRowMovies />
+					<ContentRowProducts />
 					{/*<!-- End movies in Data Base -->*/}
 					
 	
 					{/*<!-- Content Row Last Movie in Data Base -->*/}
 					<div className="row">
 						{/*<!-- Last Movie in DB -->*/}
-						<LastMovieInDb />
+						<LastMovieInDb 
+							
+							lastImgProduct = {lastImgProduct}
+						/>
 						{/*<!-- End content row last movie in Data Base -->*/}
 
 						{/*<!-- Genres in DB -->*/}
-						<GenresInDb />
+						<ProductsInDb />
 
 						{/*<!--End Genres In Db-->*/}		
 					</div>

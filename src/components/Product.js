@@ -7,6 +7,7 @@ function Product(props){
                 <div className="card text-white bg-dark  shadow">
                     <div className="card-body">
                         {props.name}
+                      
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../assets/images/logo-DH.png';
+
 import { Link } from "react-router-dom";
 
 function SideBar(){
@@ -11,7 +11,7 @@ function SideBar(){
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-100" src={image} alt="Digital House"/>
+                        
                     </div>
                 </a>
 
@@ -23,7 +23,7 @@ function SideBar(){
                 <Link to="/" className="nav-link" >
                      
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span>
+                        <span>Dashboard - APOLO</span>
                         </Link>
                 </li>
 
@@ -51,10 +51,10 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
-                <Link to="/movies" className="nav-link" >
+                <Link to="/countBySecction" className="nav-link" >
                      
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Movies List</span>
+                        <span>Count Total By Secction</span>
                         </Link>
                 </li>
 

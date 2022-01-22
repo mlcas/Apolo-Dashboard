@@ -7,6 +7,7 @@ class ProductsInDb extends Component {
     this.state = {
       color: "",
       productsList: [],
+    
     };
   }
   componentDidMount(){
@@ -16,19 +17,18 @@ class ProductsInDb extends Component {
     })
     .then(producto =>{
     //console.log(genres)
-    this.setState({productsList: producto.products})
+    this.setState({productsList: producto.products,
+     
+    })
     })
     .catch(error => console.log(error))
     }
-    
   cambiarColor() {
     this.setState({
       color: "bg-secondary",
     });
   }
-
   render() {
-      
     return (
       <React.Fragment>
         {/*<!-- Categories in DB -->*/}
@@ -47,6 +47,7 @@ class ProductsInDb extends Component {
                 { this.state.productsList.map((product, index) => {
                   return <Product {...product} key={index} />;
                 })}
+              
               </div>
             </div>
           </div>
