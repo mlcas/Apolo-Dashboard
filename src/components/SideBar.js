@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../assets/images/logo-DH.png';
+
 import { Link } from "react-router-dom";
 
 function SideBar(){
@@ -11,7 +11,7 @@ function SideBar(){
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-100" src={image} alt="Digital House"/>
+                        
                     </div>
                 </a>
 
@@ -23,7 +23,7 @@ function SideBar(){
                 <Link to="/" className="nav-link" >
                      
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span>
+                        <span>Dashboard - APOLO</span>
                         </Link>
                 </li>
 
@@ -35,30 +35,21 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                <Link to="/lastMovie" className="nav-link collapsed" >
+                <Link to="/lastProduct" className="nav-link collapsed" >
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Last Movie In Db</span>
+                        <span>Ultimo Producto</span>
                 </Link>
                 </li>
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                <Link to="/genre" className="nav-link" >
+                <Link to="/product" className="nav-link" >
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Genres</span>
+                        <span>Products</span>
                         </Link>
                 </li>
 
-                {/*<!-- Nav Item - Tables -->*/}
-                <li className="nav-item">
-                <Link to="/movies" className="nav-link" >
-                     
-                        <i className="fas fa-fw fa-table"></i>
-                        <span>Movies List</span>
-                        </Link>
-                </li>
-
-                {/*<!-- Divider -->*/}
+              
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
             {/*<!-- End of Sidebar -->*/}

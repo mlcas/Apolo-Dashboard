@@ -3,10 +3,10 @@ import SideBar from './SideBar';
 import ContentWrapper from './ContentWrapper';
 import {  Route, Routes} from "react-router-dom";
 
-import ContentRowMOvies from './ContentRowMovies';
-import LastMovieInDb from './LastMovieInDb';
-import GenreInDbClass from './GenreInDbClass';
+
 import NotFound from './NotFound';
+import ProductsInDb from './ProductsInDb';
+import ContentLastProduct from './ContentLastProduct';
 
 
 
@@ -19,9 +19,8 @@ function App() {
          
           <Routes>
           <Route  path="/" exact ={true}  element= {< ContentWrapper />} />
-          <Route  path="/genre"   element= {< GenreInDbClass />} />
-          <Route path="/movies" element= {< ContentRowMOvies />} />
-          <Route path="/lastMovie" element= {< LastMovieInDb />} />
+          <Route  path="/product"   element= {< ProductsInDb />} />
+          <Route path="/lastProduct" element= {< ContentLastProduct />} />
           <Route path="*"  element= {< NotFound />} />
           </Routes>
         
